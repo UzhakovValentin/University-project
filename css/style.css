@@ -1,0 +1,97 @@
+/*Registration*/
+input{
+    margin: 10px 48px;
+    font-size: 20px;
+}
+.input_field{
+    width: 200px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding-left: 3px;
+    background-color: rgb(232, 240, 254);
+
+}
+.button{
+    width: 205px;
+    height: 36px; 
+}
+form{
+    height: 450px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-style: hidden;
+    margin: 10px auto;
+}
+
+/*Main*/
+.pic{
+    margin: 20px 26px;
+    box-shadow: 10px 10px 10px 1px rgba(126, 152, 178, 0.3);
+}
+.main_text{
+    border-left: 2px solid rgba(126, 152, 178, 0.3);
+    border-right: 2px solid rgba(126, 152, 178, 0.3);
+    width: 1200px;
+    height: 570px;
+    font-size: 25px;
+    margin: 30px auto;
+    padding: 0px 10px;  
+}
+.text{
+    text-indent: 50px;
+    text-align: justify;
+}
+
+/*Auth*/
+.reg{
+    width: 106px;
+    margin: -38px 139px;
+}
+.reg_ref{
+    font-size: 20px;
+}
+
+/*Account*/
+.application-container{
+    width: 65%;
+    margin: 10px 30px;
+    position: relative;
+    left: 3.7%;
+}
+.application_list{
+    width: 100%;
+    border-collapse: collapse;   
+}
+tr{
+    height: 50px;
+    border-bottom: 2px white solid;
+    background-color: aliceblue;
+}
+tr:hover{
+    background-color: darkgray;
+}
+td{
+    padding: 15px;
+    text-align: center;
+}
+
+.user-info{
+    background-color: cadetblue;
+    height: 400px;
+    width: 23%;
+    margin: 10px -20px;
+    display: flex;
+    justify-content: center;
+}
+.account-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+.user-doings{
+    position: relative;
+    top: 90%;
+
+}
