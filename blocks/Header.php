@@ -11,7 +11,7 @@
                 <ul>
                     <a href="../main.php"><li>Главная</li></a>
                     <a href="../events.php"><li>Афиша</li></a>
-                    <a href= ""><li>Контакты</li></a>
+                    <a href=""><li>Контакты</li></a>
                     <a href="../authorization.php"><li>Войти</li></a>
                 </ul>
             </div>

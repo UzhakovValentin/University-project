@@ -76,7 +76,6 @@ td{
     padding: 15px;
     text-align: center;
 }
-
 .user-info{
     background-color: cadetblue;
     height: 400px;
@@ -89,9 +88,34 @@ td{
     width: 100%;
     display: flex;
     justify-content: center;
-    }
+}
 .user-doings{
     position: relative;
     top: 90%;
+}
 
+/*Events*/
+.event-list{
+    display: flex;
+    justify-content: center;
+}
+.events{
+    display: block;
+    width: 100%;
+}
+.event-list-item{
+    margin: 15px auto;
+    padding: 3px 9px;
+    display: flex;
+    height: 100px;
+    width: 70%;
+    border: 1px solid #e3e3e3;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-avatar{
+    width: 90px;
+    height: 90px;
+    background-image: url("../images/header_background.jpg");
+    border-radius: 50%;
 }

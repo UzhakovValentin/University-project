@@ -10,7 +10,7 @@
         <main class="account-main">
             <div class="user-info">
                 <div class="user-doings">
-                    Оставить заявку<br>
+                    <a href="event-application.php">Оставить заявку</a><br>
                     Выйти
                 </div>
             </div>
@@ -29,6 +29,6 @@
 
             </div>
         </main>
-      
+
     </body>
 </html>

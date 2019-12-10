@@ -6,7 +6,7 @@
         <title></title>
     </head>
     <body>
-        <footer>
+        <footer ig="footer">
 
         </footer>
     </body>
