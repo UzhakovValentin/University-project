@@ -6,7 +6,15 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <?php require './blocks/Header.php'; ?>
+
+        <?php
+        require './php_scripts/authCheck.php';
+        if (AuthCheck()) {
+            require './blocks/AuthHeader.php';
+        } else {
+            require './blocks/Header.php';
+        }
+        ?>
         <main>
             <div class="images_row">
                 <img class="pic" src="images/1.jpg">

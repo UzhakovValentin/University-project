@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <?php require './blocks/Header.php'; ?>
+        <?php require './blocks/AuthHeader.php'; ?>
         <main class="account-main">
             <div class="user-info">
                 <div class="user-doings">
                     <a href="event-application.php">Оставить заявку</a><br>
-                    Выйти
+                    <a href="php_scripts/logout.php">Выйти</a>
                 </div>
             </div>
             <div class="application-container">

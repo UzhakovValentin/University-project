@@ -11,7 +11,14 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <?php require './blocks/Header.php'; ?>
+        <?php
+        require './php_scripts/authCheck.php';
+        if (AuthCheck()) {
+            require './blocks/AuthHeader.php';
+        } else {
+            require './blocks/Header.php';
+        }
+        ?>
         <main class="event-list">
             <div class="events">
                 <div class="event-list-item">
