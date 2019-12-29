@@ -21,54 +21,34 @@ and open the template in the editor.
         ?>
         <main class="event-list">
             <div class="events">
-                <div class="event-list-item">
-                    <a href="" class="event-avatar"></a>
-                    <div class="event-title">
-                        fghfdghfdfydhf
+                <?php
+                include './config/dbConnectConfig.php';
+                $link = mysqli_connect($host, $user, $password, $database)
+                        or die("Ошибка: " . mysql_error($link));
+
+                $getEventsQuery = "SELECT title, description, eventtimes.starttime, eventtimes.endtime FROM events JOIN eventtimes ON eventtimes.eventtimeid = events.eventtimeid WHERE status='Accepted'";
+                $result = mysqli_query($link, $getEventsQuery)
+                        or die("Ошибка: " . mysqli_error($link));
+
+                while ($data = mysqli_fetch_assoc($result)):
+                    ?>
+                    <div class="event-list-item">
+                        <a href="" class="event-avatar"></a>
+                        <div class="event-title">
+                            <?php echo $data['title'] ?>
+                        </div>
+                        <div class="event-discr">
+                            <?php echo $data['description'] ?>
+                        </div>
+                        <div class="event-date">
+                            <?php echo "Начало: " . $data['starttime'] . "<br>" ?>
+                            <?php echo "Конец: " . $data['endtime'] ?>
+                        </div>
                     </div>
-                    <div>
-                        lfjgdfklgjdkfl
-                    </div>
-                    <div>
-                        fdgdfgsd
-                    </div>
-                </div>
-                <div class="event-list-item">
-                    <a href="" class="event-avatar"></a>
-                    <div class="event-title">
-                        fghfdghfdfydhf
-                    </div>
-                    <div>
-                        lfjgdfklgjdkfl
-                    </div>
-                    <div>
-                        fdgdfgsd
-                    </div>
-                </div>
-                <div class="event-list-item">
-                    <a href="" class="event-avatar"></a>
-                    <div class="event-title">
-                        fghfdghfdfydhf
-                    </div>
-                    <div>
-                        lfjgdfklgjdkfl
-                    </div>
-                    <div>
-                        fdgdfgsd
-                    </div>
-                </div>
-                <div class="event-list-item">
-                    <a href="" class="event-avatar"></a>
-                    <div class="event-title">
-                        fghfdghfdfydhf
-                    </div>
-                    <div>
-                        lfjgdfklgjdkfl
-                    </div>
-                    <div>
-                        fdgdfgsd
-                    </div>
-                </div>
+                    <?php
+                endwhile;
+                mysqli_close($link);
+                ?>
             </div>
         </main>
         <?php require './blocks/Footer.php'; ?>

@@ -28,11 +28,14 @@ if (isset($data)) {
 
         setcookie("id", $data['userId'], time() + 360, "/");
         setcookie("uh", $userHash, time() + 360, "/");
+        mysqli_close($link);
         header('Location: ../account.php');
     } else {
+        mysqli_close($link);
         print "Введены неверно логин или пароль";
     }
 } else {
+    mysqli_close($link);
     print "Введены неверно логин или пароль";
 }
 
